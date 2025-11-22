@@ -4,7 +4,15 @@ import { ArrowRight } from 'lucide-react';
 import { PROFILE } from '../constants';
 
 export const Hero: React.FC = () => {
-  // WhatsApp URL com o número fornecido
+  // --------------------------------------------------------------------------
+  // ÁREA DE CONFIGURAÇÃO DA FOTO
+  // --------------------------------------------------------------------------
+  // URL atualizada para o Postimages. 
+  // Nota: Se não carregar, verifique se o final (/foto.jpg) corresponde ao nome
+  // do arquivo no "Link Direto" do Postimages.
+  const PROFILE_IMAGE_URL = "https://i.postimg.cc/hzV8Xgpb/foto.jpg";
+  // --------------------------------------------------------------------------
+
   const whatsappUrl = "https://wa.me/5585991603686"; 
 
   return (
@@ -44,18 +52,35 @@ export const Hero: React.FC = () => {
 
           {/* Right Column: Professional Photo */}
           <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
-             {/* Decorative Glow */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary-500/20 blur-[100px] rounded-full"></div>
+             
+             <div className="relative w-full max-w-sm group">
+                {/* Back Glow */}
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary-500/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                {/* Frame Container */}
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border-2 border-slate-800 bg-slate-900 shadow-2xl transition-transform duration-500 group-hover:-translate-y-1">
+                    
+                    {/* Scanning Effect Overlay */}
+                    <div className="absolute inset-0 z-20 opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none">
+                        <div className="w-full h-[2px] bg-primary-400 shadow-[0_0_10px_rgba(56,189,248,0.8)] animate-[scan_3s_linear_infinite]"></div>
+                    </div>
 
-             <div className="relative w-full max-w-md aspect-[3/4] rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
-                  alt={PROFILE.name}
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500"
-                />
-                {/* Gradient Overlay for better text integration if needed, or just style */}
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-950/60 via-transparent to-transparent"></div>
+                    {/* Tech Corners (Industrial Look) */}
+                    <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-primary-500/40 z-20 transition-colors group-hover:border-primary-500"></div>
+                    <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-primary-500/40 z-20 transition-colors group-hover:border-primary-500"></div>
+
+                    {/* Image */}
+                    <img 
+                      src={PROFILE_IMAGE_URL}
+                      alt={PROFILE.name}
+                      className="w-full h-full object-cover object-top transition-all duration-700 ease-out"
+                    />
+                    
+                    {/* Bottom Gradient Overlay (Reduced Opacity) */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent opacity-30 group-hover:opacity-20 transition-opacity"></div>
+                </div>
              </div>
+
           </div>
 
         </div>

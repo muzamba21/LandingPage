@@ -10,20 +10,20 @@ export const PROFILE = {
 
 export const EXPERIENCE: Experience[] = [
   {
-    id: "1",
-    role: "Automation Technician",
-    company: "Can Pack Group Brazil",
-    period: "2020 - Presente",
-    description: "Liderança técnica na arquitetura de automação para linhas de montagem automotiva. Redução de 15% no tempo de ciclo através de otimização avançada de lógica PLC e padronização de bibliotecas Siemens.",
-    technologies: ["Siemens S7-1500", "Ignition SCADA", "Profinet", "Python", "Cibersegurança Industrial"]
-  },
-  {
     id: "2",
     role: "Automation Specialist",
-    company: "Robinson Crusoe Foods",
+    company: "Can Pack Group Brazil",
     period: "2017 - 2020",
     description: "Manutenção e modernização de base instalada Rockwell. Integração de células robóticas Fanuc, resultando em aumento de capacidade produtiva. Gestão de normas de segurança NR-12.",
     technologies: ["Allen-Bradley ControlLogix", "Robótica Fanuc", "EtherNet/IP", "FactoryTalk"]
+  },
+  {
+    id: "1",
+    role: "Automation Technician",
+    company: "Robinson Crusoe Foods",
+    period: "2020 - Presente",
+    description: "Liderança técnica na arquitetura de automação para linhas de montagem automotiva. Redução de 15% no tempo de ciclo através de otimização avançada de lógica PLC e padronização de bibliotecas Siemens.",
+    technologies: ["Siemens S7-1500", "Ignition SCADA", "Profinet", "Python", "Cibersegurança Industrial"]
   },
   {
     id: "3",
