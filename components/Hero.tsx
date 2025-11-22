@@ -6,8 +6,8 @@ import { PROFILE } from '../constants';
 export const Hero: React.FC = () => {
   // --------------------------------------------------------------------------
   // ÁREA DE CONFIGURAÇÃO DA FOTO
-  // Restaurando uma imagem profissional de exemplo (Placeholder)
-  const PROFILE_IMAGE_URL = "https://i.im.ge/2025/11/22/4qo5s9.unnamed.jpeg";
+  // Restaurando imagem profissional de placeholder (Alta Qualidade)
+  const PROFILE_IMAGE_URL = "https://i.im.ge/2025/11/22/4qXbDF.IMG-20250717-WA0022.jpeg";
   // --------------------------------------------------------------------------
 
   const whatsappUrl = "https://wa.me/5585991603686"; 
@@ -50,8 +50,8 @@ export const Hero: React.FC = () => {
           {/* Right Column: Professional Photo */}
           <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
              
-             {/* Container */}
-             <div className="relative w-full max-w-sm z-10">
+             {/* Container - Reduzido para max-w-xs para ficar mais compacto */}
+             <div className="relative w-full max-w-xs z-10">
                 
                 {/* Back Glow */}
                 <div className="absolute -inset-2 bg-primary-500/20 rounded-2xl blur-2xl -z-10"></div>
@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
                     <img 
                       src={PROFILE_IMAGE_URL}
                       alt={PROFILE.name}
-                      className="w-full h-full object-cover relative z-20"
+                      className="w-full h-full object-cover object-top relative z-20"
                       loading="eager"
                     />
                     
